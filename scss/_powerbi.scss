@@ -1,0 +1,21 @@
+.container {
+    z-index: -1;
+    position: relative;
+    overflow: hidden;
+    width: auto;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  }
+
+  .responsive-iframe {
+    
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    left: 15rem;
+    bottom: 0;
+    right: 0;
+    width: 80%;
+    height: 60%;
+    align-items: center;
+    
+  }
