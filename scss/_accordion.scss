@@ -1,0 +1,96 @@
+.accordion {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  .accordion input{
+    display: none;
+    
+  }
+  .accordion input + label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1em;
+    padding: 10px 40px;
+    color: #ddd;
+    background: $DarkBackground;
+    background: -webkit-linear-gradient(top, #363636 0%, #363636 50%, #454545 90%, #363636 100%);
+  }
+  .accordion label i {
+    font-size: 0.9em;
+    position: absolute;
+    left: 15px;
+    top: 14px;
+  }
+  .accordion label i.fa-chevron-down {
+    right: 20px;
+    left: auto;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+  }
+  .accordion input:checked + label {
+    background: $DXCpurple;
+    color: #fff;
+    
+  }
+  .accordion input:checked + label i.fa-chevron-down{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      transform: rotate(180deg);
+  }
+  .accordion input + label:hover {
+    //background: -webkit-linear-gradient(top, #009CCE 0%, #009CCE 50%, #00779D 90%, #009CCE 100%);
+    background: $DXCpurple;
+    color: #fff;
+  }
+  .accordion .item {
+    transform: scaleY(0);
+    transform-origin: top;
+    max-height: 0px;
+    overflow: hidden;
+    position: relative;
+    //border: 1px solid #bbb;
+    //padding-bottom: 1rem;
+    font-weight: normal;
+    font-size: 14px;
+    background: #fff;
+    color: #000;
+    transition: all 0.3s ease-in-out;
+  }
+  #item1:checked ~ #content1,
+  #item2:checked ~ #content2,
+  #item3:checked ~ #content3,
+  #item4:checked ~ #content4,
+  #item5:checked ~ #content5,
+  #item6:checked ~ #content6,
+  #item7:checked ~ #content7,
+  #item8:checked ~ #content8,
+  #item9:checked ~ #content9,
+  #item10:checked ~ #content10,
+  #item11:checked ~ #content11 {
+    max-height: 350px;
+    transform: scaleY(1);
+  }
+  .accordion .item h4, .accordion .item p{
+    margin: 0;
+    padding-bottom: 1rem;
+  }
+  .accordion .item h4 {
+    padding: 10px;
+    //border-bottom: 1px solid #bbb;
+  }
+  .accordion .item p {
+    padding: 10px 0;
+  }
+
+  .padding_div{
+
+    padding-bottom:1rem;
+    
+  }

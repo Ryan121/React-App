@@ -65,7 +65,7 @@ body.noscroll {
 .glow-on-hover:active:after {
   -webkit-transition: background .3s ease-in-out;
   transition: background .3s ease-in-out;
-  background: black;
+  background: #363636;
 }
 
 .glow-on-hover:hover:before {
@@ -78,7 +78,7 @@ body.noscroll {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #1e272e;
+  background: #363636;
   left: 0;
   top: 0;
   border-radius: 10px;
@@ -450,37 +450,6 @@ body.noscroll {
   }
 }
 
-.technical_outer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 1rem;
-}
-
-.technical_inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
-  color: #5f249f;
-}
-
-.pagetitle {
-  position: absolute;
-  top: 0;
-  vertical-align: top;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
 .header {
   position: -webkit-sticky;
   position: sticky;
@@ -646,5 +615,298 @@ body.noscroll {
 
 .chart_card {
   width: 100%;
+}
+
+/*
+   * Toggle button styles
+   */
+.toggle-button {
+  position: relative;
+  display: inline-block;
+}
+
+.toggle-button label {
+  display: inline-block;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: left;
+}
+
+.toggle-button input {
+  display: none;
+}
+
+.toggle-button__icon {
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.toggle-button__icon:before, .toggle-button__icon:after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: 35%;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.toggle-button--aava label {
+  height: 2rem;
+  line-height: 2rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-radius: 2rem;
+}
+
+.toggle-button--aava label:before, .toggle-button--aava label:after {
+  position: absolute;
+  right: 1rem;
+  -webkit-transition: all 0.2s .1s ease-out;
+  transition: all 0.2s .1s ease-out;
+}
+
+.toggle-button--aava label:before {
+  content: attr(data-on-text);
+}
+
+.toggle-button--aava label:after {
+  content: attr(data-off-text);
+}
+
+.toggle-button--aava input[type=checkbox] + label {
+  width: 6.5rem;
+  background: #FF5335;
+}
+
+.toggle-button--aava input[type=checkbox] + label:before {
+  opacity: 0;
+  -webkit-transform: translate(0, 20px);
+          transform: translate(0, 20px);
+}
+
+.toggle-button--aava input[type=checkbox] + label:after {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.toggle-button--aava input[type=checkbox]:checked ~ label {
+  width: 6.5rem;
+  background: #61B136;
+}
+
+.toggle-button--aava input[type=checkbox]:checked ~ label:before {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.toggle-button--aava input[type=checkbox]:checked ~ label:after {
+  opacity: 0;
+  -webkit-transform: translate(0, -20px);
+          transform: translate(0, -20px);
+}
+
+.toggle-button--aava input[type=checkbox]:checked ~ .toggle-button__icon:before {
+  -webkit-transform: translate(-10%, 100%) rotate(45deg);
+          transform: translate(-10%, 100%) rotate(45deg);
+  width: 16.66667px;
+}
+
+.toggle-button--aava input[type=checkbox]:checked ~ .toggle-button__icon:after {
+  -webkit-transform: translate(30%) rotate(-45deg);
+          transform: translate(30%) rotate(-45deg);
+}
+
+.toggle-button--aava .toggle-button__icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 50px;
+  width: 50px;
+}
+
+.toggle-button--aava .toggle-button__icon:before, .toggle-button--aava .toggle-button__icon:after {
+  height: 3px;
+  border-radius: 3px;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.toggle-button--aava .toggle-button__icon:before {
+  width: 25px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.toggle-button--aava .toggle-button__icon:after {
+  width: 25px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.accordion {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.accordion input {
+  display: none;
+}
+
+.accordion input + label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1em;
+  padding: 10px 40px;
+  color: #ddd;
+  background: #363636;
+  background: -webkit-linear-gradient(top, #363636 0%, #363636 50%, #454545 90%, #363636 100%);
+}
+
+.accordion label i {
+  font-size: 0.9em;
+  position: absolute;
+  left: 15px;
+  top: 14px;
+}
+
+.accordion label i.fa-chevron-down {
+  right: 20px;
+  left: auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.accordion input:checked + label {
+  background: #5f249f;
+  color: #fff;
+}
+
+.accordion input:checked + label i.fa-chevron-down {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.accordion input + label:hover {
+  background: #5f249f;
+  color: #fff;
+}
+
+.accordion .item {
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  max-height: 0px;
+  overflow: hidden;
+  position: relative;
+  font-weight: normal;
+  font-size: 14px;
+  background: #fff;
+  color: #000;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#item1:checked ~ #content1,
+#item2:checked ~ #content2,
+#item3:checked ~ #content3,
+#item4:checked ~ #content4,
+#item5:checked ~ #content5,
+#item6:checked ~ #content6,
+#item7:checked ~ #content7,
+#item8:checked ~ #content8,
+#item9:checked ~ #content9,
+#item10:checked ~ #content10,
+#item11:checked ~ #content11 {
+  max-height: 350px;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+.accordion .item h4, .accordion .item p {
+  margin: 0;
+  padding-bottom: 1rem;
+}
+
+.accordion .item h4 {
+  padding: 10px;
+}
+
+.accordion .item p {
+  padding: 10px 0;
+}
+
+.padding_div {
+  padding-bottom: 1rem;
+}
+
+.technical-bootcamp-page {
+  position: relative;
+  background: #E4E9F7;
+  min-height: 100vh;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 4.9rem);
+  height: 100%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+.sidebar.open ~ .technical-bootcamp-page {
+  left: 240px;
+  width: calc(100% - 240px);
+}
+
+.technical_outer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+}
+
+.technical_inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  color: #5f249f;
+}
+
+.pagetitle {
+  position: absolute;
+  top: 0;
+  vertical-align: top;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.accordian_display {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  height: 5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=styles.css.map */
