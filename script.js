@@ -67,3 +67,90 @@ function activateLink(){
 list.forEach((item) =>
 item.addEventListener('click', activateLink));
 
+
+
+// Load Bootcamp pages
+
+// Technical Page Load Function
+$(document).ready( function() {
+  $("#technical-page").on("click", function() {
+      $("#content").load("./pages/technical.html");
+  });
+});
+
+// Consulting Page Load Function
+$(document).ready( function() {
+  $("#consulting-page").on("click", function() {
+      $("#content").load("./pages/consulting.html");
+  });
+});
+
+// MLOps Page Load Function
+$(document).ready( function() {
+  $("#mlops-page").on("click", function() {
+      $("#content").load("./pages/mlops.html");
+  });
+});
+
+// Data Engineering Page Load Function
+$(document).ready( function() {
+  $("#data_engineering-page").on("click", function() {
+      $("#content").load("./pages/data_eng.html");
+  });
+});
+
+// Side-bar Button/Page relationships
+
+// Certification Page
+$(document).ready( function() {
+  $("#certification-button").on("click", function() {
+      $("#content").load("./pages/certification_page.html");
+  });
+});
+
+// Forms Page
+$(document).ready( function() {
+  $("#forms-button").on("click", function() {
+      $("#content").load("./pages/forms_page.html");
+  });
+});
+
+// Default on load page - Dashboard
+$(document).ready( function() {
+      $("#content").load("./pages/dashboard_page.html");
+});
+
+// Dashboard Page
+$(document).ready( function() {
+  $("#dashboard-button").on("click", function() {
+      $("#content").load("./pages/dashboard_page.html");
+  });
+});
+
+// Power BI Page
+$(document).ready( function() {
+  $("#powerbi-button").on("click", function() {
+      $("#content").load("./pages/powerbi_page.html");
+  });
+});
+
+// User Page
+$(document).ready( function() {
+  $("#user-button").on("click", function() {
+      $("#content").load("./pages/user_page.html");
+  });
+});
+
+// Help Page
+$(document).ready( function() {
+  $("#help-button").on("click", function() {
+      $("#content").load("./pages/help_page.html");
+  });
+});
+
+// FAQ Page
+$(document).ready( function() {
+  $("#faq-button").on("click", function() {
+      $("#content").load("./pages/faq_page.html");
+  });
+});
