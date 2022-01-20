@@ -1,6 +1,6 @@
   // Technical Bootcamp .scss
 
-  .technical-bootcamp-page{
+  .bootcamp-pages{
     position: relative;
     background: $DXCbackground;
     min-height: 100vh;
@@ -13,7 +13,7 @@
     z-index: 2;
   }
 
-  .sidebar.open ~ .technical-bootcamp-page{
+  .sidebar.open ~ .bootcamp-pages{
     left: 240px;
     width: calc(100% - 240px);
   }
@@ -51,5 +51,46 @@
     height: 5rem;
     align-items: center;
 
+
+  }
+
+  .temp{
+
+    margin-left: 20rem;
+
+  }
+
+  .testy{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    height: 50rem;
+    width: 100%;
+
+  }
+
+  .testies{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: orange;
+    height: 40rem;
+    margin-left: 25rem;
+    width: 50%;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+
+  }
+
+  .testies2{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: red;
+    height: 40rem;
+    margin-left: 25rem;
+    width: 50%;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
 
   }
