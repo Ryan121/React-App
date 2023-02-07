@@ -1,2 +1,2 @@
 # React-App
-A website developed for technical graduates to access key learning material
+A react.js front end to be merged with a django backend
