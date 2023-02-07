@@ -128,4 +128,12 @@
         display: none;
     }
 
+    .gpt3__navbar-menu_container p {
+        top: 20px;
+    }
+
+    .gpt3__navbar-menu_container-links-sign {
+        display: block;
+    }
+
 }
